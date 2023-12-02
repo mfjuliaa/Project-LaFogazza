@@ -1,0 +1,76 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff; /* Branco */
+}
+
+header {
+    background-color: #333; /* Preto */
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+header p {
+    margin: 5px 0;
+}
+
+#menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.item {
+    border: 1px solid #000; /* Preto */
+    padding: 8px; /* Ajuste o tamanho conforme necessário */
+    margin: 10px;
+    text-align: center;
+    background-color: #FFD700; /* Amarelo mais escuro */
+    width: 200px; /* Ajuste o tamanho conforme necessário */
+    border-radius: 10px; /* Bordas redondas */
+}
+
+#bebidas { /* Adicionei uma classe específica para as bebidas */
+    border: 1px solid #000; /* Preto */
+    padding: 8px; /* Ajuste o tamanho conforme necessário */
+    margin: 10px;
+    text-align: center;
+    background-color: #FFD700; /* Amarelo mais escuro */
+    width: 200px; /* Ajuste o tamanho conforme necessário */
+    border-radius: 10px; /* Bordas redondas */
+}
+
+#carrinho {
+    background-color: #000; /* Preto */
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+#carrinho-lista {
+    list-style: none;
+    padding: 0;
+}
+
+button {
+    background-color: #333; /* Preto */
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555; /* Preto mais escuro */
+}
+
+/* Estilos para tornar o site responsivo */
+@media screen and (max-width: 600px) {
+    .item, #bebidas {
+        width: 100%;
+    }
+}
+

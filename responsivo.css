@@ -1,0 +1,60 @@
+/* responsivo.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+#menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    width: 300px; /* Largura fixa para evitar que os itens se espalhem demais em dispositivos pequenos */
+}
+
+#carrinho {
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+#carrinho-lista {
+    list-style: none;
+    padding: 0;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Estilos para tornar o site responsivo */
+@media screen and (max-width: 600px) {
+    .item {
+        width: 100%; /* Em telas pequenas, os itens ocuparão toda a largura disponível */
+    }
+}
