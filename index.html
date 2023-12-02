@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,14 +8,39 @@
     <link rel="stylesheet" href="responsivo.css">
     <title>La fogazza</title>
 </head>
+
 <body>
     <header>
         <h1>La fogazza</h1>
         <p>Uma jornada de sabores em família ❤</p>
         <p>Horário de Funcionamento: Quinta a Domingo, 19h às 23hrs🕦</p>
+        <p>Basta apenas um clique para adicionar ao seu carrinho🛒</p>
 
 
     </header>
+
+
+    <!-- ... (código anterior) ... -->
+
+    <section id="carrinho">
+        <h2>Carrinho</h2>
+        <ul id="carrinho-lista"></ul>
+        <p id="total">Total: $0.00</p>
+        <label for="endereco">Seu Endereço:</label>
+        <textarea id="endereco" placeholder="Digite seu endereço"></textarea>
+        <label for="forma-pagamento">Forma de Pagamento:</label>
+        <select id="forma-pagamento">
+            <option value="dinheiro">Dinheiro</option>
+            <option value="cartao débito">Cartão de Débito</option>
+            <option value="cartao crédito ">Cartão de Crédito</option>
+            <option value="pix">PIX</option>
+            <!-- Adicione mais opções de forma de pagamento conforme necessário -->
+        </select>
+        <button onclick="finalizarCompra()">Finalizar Compra</button>
+    </section>
+
+    <!-- ... (código posterior) ... -->
+
 
     <section id="menu">
         <!-- Item 1 -->
@@ -22,8 +48,8 @@
             <h2>Fogazza Presunto e Mussarela</h2>
             <p>Deliciosa Fogazza de presunto,mussarela,tomate e orégano.</p>
             <p>Tamanhos: 20cm ($25.90), 30cm ($32.90)</p>
-            <button onclick="adicionarAoCarrinho('Fogazza presunto e mussarela 20cm', 25.90)">20cm</button>
-            <button onclick="adicionarAoCarrinho('Fogazza presunto e mussarela 30cm', 32.90)">30cm</button>
+            <button onclick="adicionarAoCarrinho('Fogazza presunto e mussarela 20cm', 25.90)">Adicionar ao carrinho 20cm</button>
+            <button onclick="adicionarAoCarrinho('Fogazza presunto e mussarela 30cm', 32.90)">Adicionar ao carrinho 30cm</button>
         </div>
 
         <!-- Item 2 -->
@@ -31,71 +57,71 @@
             <h2>Fogazza Frango c/ Catupiry</h2>
             <p>Deliciosa Fogazza de frango com catupiry(scala).</p>
             <p>Tamanhos: 20cm ($25.90), 30cm ($32.90)</p>
-            <button onclick="adicionarAoCarrinho('Fogazza Frango c/ Catupiry 20cm', 25.90)">20cm</button>
-            <button onclick="adicionarAoCarrinho('Fogazza Frango c/ Catupiry 30cm', 32.90)">30cm</button>
+            <button onclick="adicionarAoCarrinho('Fogazza Frango c/ Catupiry 20cm', 25.90)">Adicionar ao carrinho 20cm</button>
+            <button onclick="adicionarAoCarrinho('Fogazza Frango c/ Catupiry 30cm', 32.90)">Adicionar ao carrinho 30cm</button>
         </div>
 
-         <!-- Item 3 -->
-         <div class="item" data-item="fogazza">
+        <!-- Item 3 -->
+        <div class="item" data-item="fogazza">
             <h2>Fogazza Calabresa c/ catupiry</h2>
             <p>Deliciosa Fogazza de calabresa com catupiry(scala).</p>
             <p>Tamanhos: 20cm ($25.90), 30cm ($32.90)</p>
-            <button onclick="adicionarAoCarrinho('Fogazza Calabresa c/ catupiry 20cm', 25.90)">20cm</button>
-            <button onclick="adicionarAoCarrinho('Fogazza Calabresa c/ catupiry 30cm', 32.90)">30cm</button>
+            <button onclick="adicionarAoCarrinho('Fogazza Calabresa c/ catupiry 20cm', 25.90)">Adicionar ao carrinho 20cm</button>
+            <button onclick="adicionarAoCarrinho('Fogazza Calabresa c/ catupiry 30cm', 32.90)">Adicionar ao carrinho 30cm</button>
         </div>
 
-         <!-- Item 4 -->
-         <div class="item" data-item="fogazza">
+        <!-- Item 4 -->
+        <div class="item" data-item="fogazza">
             <h2>Fogazza Calabresa c/ mussarela </h2>
             <p>Deliciosa Fogazza de calabresa com mussarela .</p>
             <p>Tamanhos: 20cm ($25.90), 30cm ($32.90)</p>
-            <button onclick="adicionarAoCarrinho('Fogazza Calabresa c/ mussarela 20cm', 25.90)">20cm</button>
-            <button onclick="adicionarAoCarrinho('Fogazza Calabresa c/ mussarela 30cm', 32.90)">30cm</button>
+            <button onclick="adicionarAoCarrinho('Fogazza Calabresa c/ mussarela 20cm', 25.90)">Adicionar ao carrinho 20cm</button>
+            <button onclick="adicionarAoCarrinho('Fogazza Calabresa c/ mussarela 30cm', 32.90)">Adicionar ao carrinho 30cm</button>
         </div>
 
-         <!-- Item 5 -->
-         <div class="item" data-item="fogazza">
+        <!-- Item 5 -->
+        <div class="item" data-item="fogazza">
             <h2>Fogazza Vegetariana</h2>
             <p>Deliciosa Fogazza de mussarela,tomate,milho com catupiry(scala).</p>
             <p>Tamanhos: 20cm ($25.90), 30cm ($32.90)</p>
-            <button onclick="adicionarAoCarrinho('Fogazza  Vegetariana 20cm', 25.90)">20cm</button>
-            <button onclick="adicionarAoCarrinho('Fogazza  Vegetariana 30cm', 32.90)">30cm</button>
+            <button onclick="adicionarAoCarrinho('Fogazza  Vegetariana 20cm', 25.90)">Adicionar ao carrinho 20cm</button>
+            <button onclick="adicionarAoCarrinho('Fogazza  Vegetariana 30cm', 32.90)">Adicionar ao carrinho 30cm</button>
         </div>
 
-         <!-- Item 6 -->
-         <div class="item" data-item="Pastel">
+        <!-- Item 6 -->
+        <div class="item" data-item="Pastel">
             <h2>Pastel Presunto e Mussarela</h2>
             <p>Delicioso Pastel de presunto,mussarela,tomate e orégano.</p>
             <p>Tamanho único: ($12.00)</p>
             <button onclick="adicionarAoCarrinho('Pastel Presunto e Mussarela', 12.00)">Adicionar ao carrinho</button>
-            
+
         </div>
 
-         <!-- Item 7 -->
-          <div class="item" data-item="Pastel">
+        <!-- Item 7 -->
+        <div class="item" data-item="Pastel">
             <h2>Pastel Queijo </h2>
             <p>Delicioso Pastel de Queijo minas.</p>
             <p>Tamanho único: ($12.00)</p>
             <button onclick="adicionarAoCarrinho('Pastel Queijo', 12.00)">Adicionar ao carrinho</button>
-           
+
         </div>
 
-         <!-- Item 8 -->
-         <div class="item" data-item="Pastel">
+        <!-- Item 8 -->
+        <div class="item" data-item="Pastel">
             <h2>Pastel Frango c/ Catupiry</h2>
             <p>Delicioso Pastel de frango com catupiry(scala).</p>
             <p>Tamanho único: ($12.00)</p>
             <button onclick="adicionarAoCarrinho('Pastel Frango c/ Catupiry', 12.00)">Adicionar ao carrinho</button>
-           
+
         </div>
 
-         <!-- Item 9 -->
-         <div class="item" data-item="Pastel">
+        <!-- Item 9 -->
+        <div class="item" data-item="Pastel">
             <h2>Pastel Carne </h2>
             <p>Delicioso Pastel de Carne.</p>
             <p>Tamanho único: ($12.00)</p>
             <button onclick="adicionarAoCarrinho('Pastel Carne', 12.00)">Adicionar ao carrinho</button>
-            
+
         </div>
 
         <!-- bebida -->
@@ -106,43 +132,24 @@
             <button onclick="adicionarAoCarrinho('Guaraná 2l', 11.90)">Guaraná 2l</button>
             <button onclick="adicionarAoCarrinho('Coca-cola Lata', 5.50)">Coca-cola Lata</button>
             <button onclick="adicionarAoCarrinho('Guaraná Lata', 5.50)">Guaraná Lata</button>
-            
+
         </div>
 
-         <div class="item" data-item="bebida">
+        <div class="item" data-item="bebida">
             <h2>Bebidas</h2>
             <p>Escolha sua bebida favorita.</p>
             <button onclick="adicionarAoCarrinho('H2OH 500ml', 6.50)">H2OH 500ml</button>
             <button onclick="adicionarAoCarrinho('Água s/gás', 3.00)">Água s/gás</button>
             <button onclick="adicionarAoCarrinho('Água c/gás', 3.50)">Água c/gás</button>
         </div>
-    
+
 
     </section>
 
-<!-- ... (código anterior) ... -->
-
-<section id="carrinho">
-    <h2>Carrinho</h2>
-    <ul id="carrinho-lista"></ul>
-    <p id="total">Total: $0.00</p>
-    <label for="endereco">Seu Endereço:</label>
-    <textarea id="endereco" placeholder="Digite seu endereço"></textarea>
-    <label for="forma-pagamento">Forma de Pagamento:</label>
-    <select id="forma-pagamento">
-        <option value="dinheiro">Dinheiro</option>
-        <option value="cartao débito">Cartão de Débito</option>
-        <option value="cartao crédito ">Cartão de Crédito</option>
-        <option value="pix">PIX</option>
-        <!-- Adicione mais opções de forma de pagamento conforme necessário -->
-    </select>
-    <button onclick="finalizarCompra()">Finalizar Compra</button>
-</section>
-
-<!-- ... (código posterior) ... -->
 
 
 
     <script src="script.js"></script>
 </body>
+
 </html>
